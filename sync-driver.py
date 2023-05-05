@@ -6,7 +6,7 @@ import time
 
 # parse incoming env vars
 
-rclone_path = os.environ.get("RCLONE_PATH")
+rclone_path = "/usr/bin/rclone"
 rclone_remote = os.environ.get("RCLONE_REMOTE")
 source_dir = os.environ.get("RCLONE_SOURCE")
 
@@ -25,7 +25,7 @@ except:
     sync_minwait = 5 * 60
 
 logging.basicConfig(level=logging.INFO)
-logging.info("umt rclone sync:")
+logging.info("rclone sync:")
 logging.info("  source path: %s", source_dir)
 logging.info("  remote path: %s", rclone_remote)
 logging.info(" sync minwait: %d", sync_minwait)
